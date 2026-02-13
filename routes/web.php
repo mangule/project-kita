@@ -17,6 +17,10 @@ Route::get('/kontak', function () {
 Route::get('/berita', function () {
     return view('berita');
 });
+Route::get('/blog', function () {
+    return view('blog');
+});
+
 
 
 
