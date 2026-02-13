@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PegawaiController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,10 +18,12 @@ Route::get('/kontak', function () {
 Route::get('/berita', function () {
     return view('berita');
 });
+
 Route::get('/blog', function () {
     return view('blog');
 });
 
+Route::resource('pegawais', PegawaiController::class);
 
 
 
