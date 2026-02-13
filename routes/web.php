@@ -14,6 +14,10 @@ Route::get('/kontak', function () {
     return view('kontak');
 });
 
+Route::get('/blog', function () {
+    return view('blog');
+});
+
 
 
 
