@@ -14,6 +14,9 @@ Route::get('/kontak', function () {
     return view('kontak');
 });
 
+Route::get('/berita', function () {
+    return view('berita');
+});
 
 
 
