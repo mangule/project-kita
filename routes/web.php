@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -19,6 +20,7 @@ Route::get('/kontak', function () {
 Route::get('/berita', function () {
     return view('berita');
 });
+
 Route::get('/blog', function () {
     return view('blog');
 });
@@ -31,6 +33,17 @@ Route::delete('/siswa/{id}', [SiswaController::class, 'destroy']);
 
 
 Route::resource('barang', BarangController::class);
+
+
+
+
+Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
+Route::post('/mahasiswa', [MahasiswaController::class, 'store']);
+
+Route::get('/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit']);
+Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update']);
+Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy']);
 
 
 
