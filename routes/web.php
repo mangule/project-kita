@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\MahasiswaController;
@@ -47,6 +48,7 @@ Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy']);
 
 
 
+Route::resource('pegawais', PegawaiController::class);
 
 
 
